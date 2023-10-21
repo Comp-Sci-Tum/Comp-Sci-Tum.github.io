@@ -3,7 +3,7 @@
 
 ### Files Not To Upload By OS
 ### macOS ###
-# General
+# General Files Ending In These Extensions
 .DS_Store
 .AppleDouble
 .LSOverride
