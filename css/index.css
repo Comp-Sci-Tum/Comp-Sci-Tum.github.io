@@ -1,0 +1,100 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111111;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #333333;
+  }
+  .themes {
+    float: right;
+  }
+  .resume {
+    float: right;
+  }
+  .projects {
+    float: right;
+  }
+  
+  .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    float: none;
+    color: black;
+    /* padding: 12px 16px; */
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .show {
+    display: block;
+  }
+  
+  .accounts {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+  .linkedin {
+    padding-bottom: 20px;
+  }
+  .github {
+    padding-bottom: 20px;
+  }
+  
+  .info {
+    grid-area: main;
+    color: grey;
+    text-align: center;
+  }
+  
+  .img {
+    grid-area: right;
+  }
+  .container {
+    display: grid;
+    grid-template-areas:
+      "menu main main right right right"
+      "menu main main right right right"
+      "menu main main right right right";
+    gap: 10px;
+    background-color: #19191a;
+    padding: 10px;
+  }
+  
