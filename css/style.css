@@ -57,6 +57,14 @@ body {
 .heading_container p {
   margin-bottom: 0;
 }
+.links {
+  text-decoration: none;
+}
+
+.container-cont {
+  margin: 2%;
+  padding: 10px;
+}
 
 .heading_container.heading_center {
   -webkit-box-align: center;
