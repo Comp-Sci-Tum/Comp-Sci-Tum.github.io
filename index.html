@@ -21,7 +21,7 @@
 
 </head>
 
-<body>
+<body id="navbarToggleExternalContent" data-bs-theme="auto">
       <div class="header_bottom">
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container ">
@@ -103,14 +103,23 @@
             const darkThemeBtn = $('#darkThemeBtn');
             const autoThemeBtn = $('#autoThemeBtn');
 
-            
             const setTheme = (theme) => {
               themeToggle.attr('data-bs-theme', theme);
+              localStorage.setItem('theme', theme);
             };
-            
+
+            const getTheme = () => {
+              const savedTheme = localStorage.getItem('theme');
+              if (savedTheme) {
+                setTheme(savedTheme);
+              }
+            };
+
             lightThemeBtn.on('click', () => setTheme('light'));
             darkThemeBtn.on('click', () => setTheme('dark'));
-            autoThemeBtn.on('click', () =>setTheme('auto'));
+            autoThemeBtn.on('click', () => setTheme('auto'));
+
+            getTheme();
           });
         </script>
         <nav class="navbar navbar-dark bg-transparent">
