@@ -102,23 +102,36 @@
             const lightThemeBtn = $('#lightThemeBtn');
             const darkThemeBtn = $('#darkThemeBtn');
             const autoThemeBtn = $('#autoThemeBtn');
-
+      
             const setTheme = (theme) => {
+              themeToggle.collapse('hide'); 
               themeToggle.attr('data-bs-theme', theme);
               localStorage.setItem('theme', theme);
             };
-
+      
             const getTheme = () => {
               const savedTheme = localStorage.getItem('theme');
               if (savedTheme) {
                 setTheme(savedTheme);
               }
             };
-
+      
             lightThemeBtn.on('click', () => setTheme('light'));
             darkThemeBtn.on('click', () => setTheme('dark'));
             autoThemeBtn.on('click', () => setTheme('auto'));
-
+      
+            
+            $('#navbarToggleExternalContent').collapse();
+      
+            
+            themeToggle.on('hidden.bs.collapse', function () {
+              console.log('Collapse is hidden'); 
+            });
+      
+            themeToggle.on('shown.bs.collapse', function () {
+              console.log('Collapse is shown'); 
+            });
+      
             getTheme();
           });
         </script>
@@ -133,6 +146,7 @@
         </nav>
       </li>
     </ul>
+  </section>
     <!-- End of Navbar-->
 
     <section class="about_section layout_padding">
@@ -187,6 +201,7 @@
         </div>
       </div>
     </section>
+    <!--footer section-->
     <section class="info_section ">
       <div class="container-cont">
         
